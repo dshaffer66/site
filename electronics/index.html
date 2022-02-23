@@ -1,17 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Doug Shaffer &dash; Electronics Training and Activities</title>
-	</head>
-	<body>
-		<header>
-			<h1>Doug Shaffer &dash; Electronics Training and Activities</h1>
-			<p>Below is a summary of the electronics projects that I've worked for my training classes and independent experimentation.  This work includes the use and programming of different microcontrollers using the C programming language as well as general circuit design to build the circuits.  Integrated Development Environments (IDE), an oscilloscope, a multimeter, and a digital logic analyzer were also used.</p>
-		</header>
+  <head>
+    <meta charset="utf-8">
+    <title>Doug Shaffer &dash; Electronics Training and Activities</title>
+  </head>
+  <body>
+    <header>
+      <h1>Doug Shaffer &dash; Electronics Training and Activities</h1>
+      <p>Below is a summary of the electronics projects that I've worked for my training classes and independent experimentation.  This work includes the use and programming of different microcontrollers using the C programming language as well as general circuit design to build the circuits.  Integrated Development Environments (IDE), an oscilloscope, a multimeter, and a digital logic analyzer were also used.</p>
+    </header>
 
-		<section>
-			<details>
+    <section>
+      <ol>
+        <li>
+          <details open>
+            <summary>Georgia Tech - The Mechatronics Revolution</summary>
+            The Mechatronics Revolution training class taught the basics of microcontroller programming and the typical associated hardware components.  
+            <br>
+            The class utilized the TI MSP432 microcontroller, h-bridge motor drivers, bump sensors, proximity sensor, and UART communication to a laptop.  
+            <br>The labs built one on top of another until the sucessful completing of the robotic car shown below.  Examples of the C programming methods were shown in the class but the project labs required us to do the programming and troubleshooting to get the project to work.
+            <figure>
+              <img src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/01_IMG_2614.jpg" width = "600" alt="Robotic Car">
+              <figcaption>Robotic Car Project from the Georgia Tech Mechatronics Revolution Class</figcaption>
+            </figure>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>University of Colorado Embedding Sensors and Motors Specialization &dash; Load Cell Lab</summary>
+            The Embedding Sensors and Motors Specialization is a series of classes that taught the concepts of numerous types of sensors and motors.
+            <br>
+            The was class taught using the Cypress PSOC 5LP microcontroller and associated development environment, IDE.  This lab used a load cell, uA741 amplifiers, LCD screen using parallel communication, and a PicoScope oscilloscope.
+            <figure>
+              <video src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/02_IMG_2748.MOV" width = "600" controls>Your browser doesn't support the <code>video</code> element.</video>
+              <figcaption>Load Cell Lab Video 1</figcaption>
+            </figure>
+            <figure>
+              <video src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/02_IMG_2749.MOV" width = "600" controls>Your browser doesn't support the <code>video</code> element.</video>
+              <figcaption>Load Cell Lab Video 2</figcaption>
+            </figure>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>University of Colorado Embedding Sensors and Motors Specialization &dash; PID Lab</summary>
+            The PID Lab again used the Cypress PSOC 5LP microcontroller and PicoScope oscilloscope.  In the lab, we programmed a PID (Proportional, Integral, Derivative) control loop to control a motor to reach the desired output.
+            <figure>
+              <img src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/03_IMG_2898.jpg" width = "600" alt="PID Control Loop">
+              <figcaption>Oscilloscope Output Showing the PID Control Loop</figcaption>
+            </figure>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>555 Timer IC in Astable Mode</summary>
+            I experimented independently with the 555 timer IC and built it into a circuit to behave in astable mode.  This allowed it to produce a pulse width modulated (PWM) signal to drive a brushed DC electric motor.  A potentiometer was used to adjust the resistance in the circuit which controls the speed of the motor.
+            <figure>
+              <video src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/04_IMG_3171.MOV" width = "600" controls>Your browser doesn't support the <code>video</code> element.</video>
+              <figcaption>555 Timer in Astable Mode</figcaption>
+            </figure>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>555 Timer IC in Monostable Mode</summary>
+            I experimented independently with the 555 timer IC and built it into a circuit to behave in monostable mode.  This circuit was paired with the previous astable mode circuit.  The monostable mode allowed the motor to run for a specific amount of time after the push of a button.  This time is determined by the capacitors used in the circuit.
+            <figure>
+              <video src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/05_IMG_3168.MOV" width = "600" controls>Your browser doesn't support the <code>video</code> element.</video>
+              <figcaption>555 Timer in Monostable Mode</figcaption>
+            </figure>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>555 Timer IC in Bistable Mode</summary>
+            I experimented independently with the 555 timer IC and built it into a circuit to behave in bistable mode.  This circuit was paired with the astable mode circuit from before.  The bistable mode allowed the motor to start at a push of one button and continue to run until a second button is pushed.
+            <figure>
+              <video src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/06_IMG_3170.MOV" width = "600" controls>Your browser doesn't support the <code>video</code> element.</video>
+              <figcaption>555 Timer in Bistable Mode</figcaption>
+            </figure>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>Motor Driver using a Microcontroller and Astable 555 Timer</summary>
+            I built a motor driver using the 555 timer in astable mode, as used before, and controlled the start and stop of the motor using the Cypress PSOC 5LP microcontroller.  The program was written to send signals to the circuit through a MOSFET to start and stop the motor at specific time periods.
+            <figure>
+              <video src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/07_IMG_3172.MOV" width = "600" controls>Your browser doesn't support the <code>video</code> element.</video>
+              <figcaption>Motor Driver using a Microcontroller and Astable 555 Timer</figcaption>
+            </figure>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>Motor Driver using PWM Signals from a Microcontroller</summary>
+            I programmed the Cypress PSOC 5LP microcontroller to drive the motor using Pulse Width Modulated (PWM) signals.  The duty cycle of the PWM signal controls how fast the motor should turn.  The program was written to step up the PWM signals after specific time intervals.  The PWM signal is then gradually increased from off to full speed and then gradually decreased to stop the motor.
+            <figure>
+              <video src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/08_IMG_3181.MOV" width = "600" controls>Your browser doesn't support the <code>video</code> element.</video>
+              <figcaption>Motor Driver using PWM Signals from a Microcontroller</figcaption>
+            </figure>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>Forward and Reverse using an H-Bridge Motor Driver</summary>
+            I built a circuit using an L293D H-Bridge motor driver.  This motor driver takes PWM signals from the Cypress PSOC 5LP microcontroller and allows a motor to drive in either forward or reverse directions.
+            <figure>
+              <video src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/09_IMG_3276.MOV" width = "600" controls>Your browser doesn't support the <code>video</code> element.</video>
+              <figcaption>H-Bridge Motor Driver for Forward and Reverse</figcaption>
+            </figure>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>Bluetooth Control for Motor Speed</summary>
+            An HM-18 Bluetooth Module was added to the circuit with the Cypress PSOC 5LP microcontroller.  The Bluetooth module allowed for serial communication with an Apple iPhone.  A basic joystick app was used to send different signals through Bluetooth to the microcontroller.  The program written for the microcontroller interprets those signals and sets the motor to run at 4 different speeds depending on which button was pushed.
+            <figure>
+              <video src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/10_IMG_3332.MOV" width = "600" controls>Your browser doesn't support the <code>video</code> element.</video>
+              <figcaption>Bluetooth Control with iPhone</figcaption>
+            </figure>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>Bluetooth Control for Motor Speed and Direction</summary>
+            The HM-18 Bluetooth Module and Cypress PSOC 5LP microcontroller were used in conjunction with a DRV8833 Motor Driver.  The motor driver allows the motor to spin in both forward and reverse directions.  The joystic app as used to send speed and direction signals to the microcontroller through Bluetooth serial communication.
+            <figure>
+              <video src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/11_IMG_3339.MOV" width = "600" controls>Your browser doesn't support the <code>video</code> element.</video>
+              <figcaption>Bluetooth Speed and Direction Control with iPhone</figcaption>
+            </figure>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>Unipolar Stepper Motor</summary>
+            A circuit was built using a 28BYJ-48 stepper motor, ULN2003 stepper motor driver and the Cypress PSOC 5LP microcontroller.  The microcontroller was programmed to drive the stepper motor forward and reverse through defined positions.  The program was written to move through individual steps by using the half-step method.
+            <figure>
+              <video src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/12_IMG_3355.MOV" width = "600" controls>Your browser doesn't support the <code>video</code> element.</video>
+              <figcaption>Stepper Motor Drive</figcaption>
+            </figure>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>Bluetooth Stepper Motor Control</summary>
+            The HM-18 Bluetooth module was added to the previous stepper motor circuit to allow the motor to be driven through commands sent from an Apple iPhone.  A termial app on the phone was used to send text inputs to the microcontroller via UART serial communication using Bluetooth.  A program was written to control the stepper motor with the following commands:
+            <ul>
+              <li>'+' takes individual steps forward.</li>
+              <li>'-' takes individual steps backwards.</li>
+              <li>'S' sets a new home position.</li>
+              <li>'H' returns the stepper motor back to its home position.</li>
+            </ul>
+            <figure>
+              <video src="https://raw.githubusercontent.com/dshaffer66/site/main/electronics/media/13_IMG_3370.MOV" width = "600" controls>Your browser doesn't support the <code>video</code> element.</video>
+              <figcaption>Bluetooth Stepper Motor Control</figcaption>
+            </figure>
+          </details>
+        </li>
 
-
-	</body>
+      </ol>
+    </section>
+  </body>
+</html>
